@@ -1,0 +1,43 @@
+{
+  "name": "the-cocktail",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "serve": "webpack server --mode=development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "css-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.2.0",
+    "node-sass": "^6.0.1",
+    "postcss": "^8.3.6",
+    "postcss-loader": "^6.1.1",
+    "postcss-preset-env": "^6.7.0",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 15 version",
+    "Chrome >= 35",
+    "Firefox >= 38",
+    "Edge >= 10",
+    "Explorer >= 9",
+    "ie >= 9",
+    "iOS >= 7",
+    "Safari >= 7",
+    "Android 2.3",
+    "Android >= 4",
+    "Opera >= 12"
+  ]
+}
