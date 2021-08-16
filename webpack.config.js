@@ -17,7 +17,8 @@ module.exports = (env, argv) => {
         devServer: {
             contentBase: path.join(__dirname, 'dist'),
             compress: true,
-            port: 8080
+            open: true,
+            port: 9000
         },
         module: {
             rules: [
