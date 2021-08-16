@@ -5,3 +5,67 @@
 //   font: $f-bold rem(24) / rem(38) $f-title;
 // }
 // ...
+
+.font-primary {
+    font-family: Roboto Slab;
+}
+
+.font-secondary {
+    font-family: Roboto;
+}
+
+h1,
+.h1 {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+h2,
+.h2 {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+h3,
+.h3 {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+h4,
+.h4 {
+    font-size: 16px;
+    line-height: 14px;
+}
+
+h5,
+.h5 {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+h6,
+.h6 {
+    font-size: 14px;
+    line-height: 19px;
+}
+
+p,
+.p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+small,
+.small {
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.spacing {
+    letter-spacing: 1.52px;
+}
+
+.bold {
+    font-weight: bold;
+}
