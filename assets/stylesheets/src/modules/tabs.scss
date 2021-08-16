@@ -1,0 +1,47 @@
+.tab {
+    ul {
+        padding: 0 20px;
+        list-style: none;
+    }
+    &__item {
+        padding: 8px 0;
+        &.active {
+            border-bottom: 2px solid $c-primary;
+        }
+    }
+    &__button {
+        .active & {
+            color: $c-primary;
+        }
+        margin: 0;
+        padding: 12px 40px;
+        background-color: $c-white;
+        color: $c-primary-light;
+        cursor: pointer;
+        font-weight: 400;
+    }
+    &-content {
+        padding: 38px 21px 29px 21px;
+        h1,
+        .h1 {
+            color: $c-primary;
+        }
+        &__article {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.25s linear;
+            &.active {
+                display: block;
+            }
+            &.show {
+                opacity: 1;
+            }
+        }
+    }
+    &__start {
+        margin-left: 12px;
+        img {
+            margin-right: 5px;
+        }
+    }
+}

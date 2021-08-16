@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $c-grey-light;
+    @extend .font-primary;
+    * {
+        box-sizing: border-box;
+    }
+    .header {
+        background-color: $c-white;
+    }
+}
