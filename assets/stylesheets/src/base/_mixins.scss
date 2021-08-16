@@ -1,0 +1,12 @@
+// Add your sass mixins and functions here
+
+// ----- rem ----- //
+//REM conversor
+//use:
+//  .element {
+//    font-size: rem(16);
+//  }
+@function rem($size) {
+  @return #{$size / $f-base}rem;
+}
+// ...
