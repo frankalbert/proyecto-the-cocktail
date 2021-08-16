@@ -1,0 +1,131 @@
+.card {
+    &-list {
+        margin-top: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        @media (min-width: 1200px) {
+            justify-content: center;
+            flex-wrap: nowrap;
+        }
+        .card {
+            position: relative;
+            margin-bottom: 16px;
+            padding: 26px 20px 18px 14px;
+            border: 1px solid $c-blue-2;
+            flex-basis: 100%;
+            background-color: $c-white;
+            @include border-radius(2px);
+            @media (min-width: 1200px) {
+                flex-basis: 19%;
+            }
+            @media (min-width: 768px) {
+                flex-basis: 48%;
+                margin-right: 7px;
+            }
+        }
+    }
+    &__title {
+        position: relative;
+        padding: 8px 16px 16px;
+        color: $c-blue-light;
+        &::before {
+            content: "";
+            position: absolute;
+            top: auto;
+            bottom: 0;
+            left: 50%;
+            width: 72px;
+            height: 1px;
+            background-color: $c-blue-3;
+            @include translate(-50%, -50%);
+        }
+        .h3 {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 40px;
+            line-height: 20px;
+        }
+    }
+    &__body {
+        margin-bottom: 80px;
+        padding: 0;
+        ul {
+            padding: 0;
+            list-style: none;
+            li {
+                position: relative;
+                margin-bottom: 6px;
+                padding-left: 13px;
+                @extend .font-secondary;
+                @extend .h5;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 8px;
+                    left: 0px;
+                    width: 5px;
+                    height: 5px;
+                    @include border-radius(50%);
+                    background-color: $c-grey-2;
+                }
+            }
+        }
+    }
+    &__footer {
+        position: absolute;
+        top: auto;
+        bottom: 18px;
+        left: 14px;
+        right: 20px;
+        @extend .font-secondary;
+        cursor: pointer;
+    }
+    &__label {
+        background-color: $c-grey-3;
+        padding: 16px;
+        cursor: pointer;
+        &.checked {
+            background-color: rgba(222, 225, 232, 0.376245);
+        }
+    }
+    &__radio {
+        display: none;
+        &:checked + .card {
+            &__label {
+                background-color: rgba(222, 225, 232, 0.376245);
+                .card {
+                    &__check {
+                        &::before {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__check {
+        position: relative;
+        margin-right: 20px;
+        width: 16px;
+        height: 16px;
+        border: 1px solid $c-green;
+        @include border-radius(50%);
+        &::before {
+            opacity: 0;
+            visibility: hidden;
+            @include transition(0.75s);
+            position: absolute;
+            content: "";
+            width: 10px;
+            height: 10px;
+            background-color: $c-green;
+            top: 50%;
+            left: 50%;
+            @include translate(-50%, -50%);
+            @include border-radius(50%);
+        }
+    }
+}
