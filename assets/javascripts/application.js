@@ -7,6 +7,7 @@ require('../../index.html');
 
 const tabLists = document.querySelectorAll('.tab .tab__item');
 const accordionList = document.querySelectorAll(".accordion__item");
+let timeResize = null;
 
 function resetClassTab(item) {
     setTimeout(() => {
@@ -44,9 +45,9 @@ tabLists.forEach(element => {
 });
 
 // Referente a los Accordions
-function checkAccordionItem(item) {
-    const content = item?.querySelector('.accordion__body') || null;
-    if (content?.style?.maxHeight) {
+function checkAccordionItem(item, reset = false) {
+    const content = document.querySelector(item.getAttribute('data-rel-accordion')) || null;
+    if (content?.style?.maxHeight && reset) {
         content.style.maxHeight = null;
     } else {
         content.style.maxHeight = content?.scrollHeight + "px";
@@ -56,11 +57,30 @@ function checkAccordionItem(item) {
 accordionList.forEach(element => {
     const title = element?.querySelector('.accordion__title') || null;
     title.addEventListener("click", () => {
+        const closestListAccordion = element.closest('.accordion__body');
+
         element.classList.toggle("expanded");
-        checkAccordionItem(element);
+        checkAccordionItem(element, true);
+        setTimeout(() => {
+            if (closestListAccordion) {
+                document.querySelectorAll(`[data-rel-accordion="#${closestListAccordion.getAttribute('id')}"]`).forEach(item => {
+                    checkAccordionItem(item, false);
+                });
+            }
+        }, 230);
     });
     if (element.classList.contains('expanded')) {
         checkAccordionItem(element);
     }
 });
 
+window.addEventListener('resize', () => {
+    clearTimeout(timeResize);
+    timeResize = setTimeout(() => {
+        accordionList.forEach(element => {
+            if (element.classList.contains('expanded')) {
+                checkAccordionItem(element);
+            }
+        });
+    }, 250);
+});
