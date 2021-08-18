@@ -64,16 +64,15 @@
     &__label {
         background-color: $c-grey-3;
         padding: 16px;
+        border: 1px solid transparent;
         cursor: pointer;
-        &.checked {
-            background-color: rgba(222, 225, 232, 0.376245);
-        }
     }
     &__radio {
         display: none;
         &:checked + .card {
             &__label {
                 background-color: rgba(222, 225, 232, 0.376245);
+                border: 1px solid $c-blue-2;
                 .card {
                     &__check {
                         &::before {
