@@ -18,6 +18,48 @@
         width: 100%;
     }
 }
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+    &-top {
+        top: 0;
+    }
+    &-botom {
+        top: auto;
+        bottom: 0;
+    }
+    &-left {
+        left: 0;
+    }
+    &-right {
+        left: auto;
+        right: 0;
+    }
+}
+.text {
+    &-white {
+        color: $c-white;
+    }
+    &-black {
+        color: $c-black;
+    }
+    &-capitalize {
+        text-transform: capitalize;
+    }
+    &-lower {
+        text-transform: lowercase;
+    }
+    &-upper {
+        text-transform: uppercase;
+    }
+}
+.bg {
+    &-red {
+        background-color: $c-red;
+    }
+}
 .d__flex {
     @extend .row;
     margin: 0;
