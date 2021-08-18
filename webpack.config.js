@@ -20,8 +20,20 @@ module.exports = (env, argv) => {
             open: true,
             port: 9000
         },
+        mode: isDevelopment ? 'development' : 'production',
         module: {
             rules: [
+                {
+                    test: /\.m?js$/,
+                    exclude: /(node_modules|bower_components)/,
+                    use: {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: ['@babel/preset-env'],
+                            plugins: ['@babel/plugin-proposal-object-rest-spread']
+                        }
+                    }
+                },
                 {
                     test: /\.html$/i,
                     loader: 'html-loader',
