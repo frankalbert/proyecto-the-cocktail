@@ -43,6 +43,13 @@
     -ms-transition: $duration;
     transition: $duration;
 }
+//@include transitionProp(max-height, .2s, ease-out);
+@mixin transitionProp($prop, $duration, $time) {
+    -webkit-transition: $prop $duration $time;
+    -moz-transition: $prop $duration $time;
+    -ms-transition: $prop $duration $time;
+    transition: $prop $duration $time;
+}
 
 //TRANSLATE
 //@include translateX(50%);
