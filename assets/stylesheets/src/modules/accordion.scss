@@ -1,0 +1,48 @@
+.accordion {
+    &__item {
+        // padding: 33px 8px 22px 8px;
+        border: 1px solid $c-grey-4;
+        @media (min-width: 768px) {
+            // padding: 33px 20px 21px 16px;
+        }
+    }
+    &__title {
+        cursor: pointer;
+        h5 {
+            position: relative;
+            display: inline-block;
+            margin: 0;
+            padding-left: 36px;
+            color: $c-primary-light;
+            &.right {
+                padding-left: 0;
+                padding-right: 36px;
+                &::before {
+                    left: auto;
+                    right: 0;
+                }
+            }
+            &::before {
+                content: url("../../../assets/images/angle-down-blue.svg");
+                position: absolute;
+                left: 0;
+                top: 0;
+                @include transition(0.5s);
+            }
+            .expanded > & {
+                &::before {
+                    @include rotate(180deg);
+                }
+            }
+        }
+        .small {
+            margin-left: 14px;
+            color: $c-blue-light;
+        }
+    }
+    &__body {
+        max-height: 0;
+        overflow: hidden;
+        @include transitionProp(max-height, 0.2s, ease-out);
+    }
+}

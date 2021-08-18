@@ -5,10 +5,483 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab" rel="stylesheet">
     <title>Prueba Técnica The Cocktail</title>
 </head>
 
 <body>
+    <main>
+        <div class="container">
+            <header class="header">
+                <nav class="tab">
+                    <ul class="d__flex justify-end">
+                        <li class="tab__item active" data-rel-tab="#content-tab-1">
+                            <h4 class="tab__button font-primary">Tab 1</h4>
+                        </li>
+                        <li class="tab__item" data-rel-tab="#content-tab-2">
+                            <h4 class="tab__button font-primary">Tab 2</h4>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <section class="tab-content my-2">
+                <article class="tab-content__article active show" id="content-tab-1">
+                    <div class="row">
+                        <div class="col col-12 d__flex justify-center align-center">
+                            <h1 class="text-center font-primary tab__title">HOTEL <span class="font-bold">Mieres del
+                                    Camín Apartamentos</span>
+                            </h1>
+                            <div class="tab__start d__flex align-center">
+                                <img src="./assets/images/star-orange.svg" alt="imagen icono" />
+                                <img src="./assets/images/star-orange.svg" alt="imagen icono" />
+                                <img src="./assets/images/star-orange.svg" alt="imagen icono" />
+                                <img src="./assets/images/star-orange.svg" alt="imagen icono" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-12">
+                            <div class="card-list d__flex">
+                                <div class="card">
+                                    <div class="card__title">
+                                        <h3 class="h3 font-bold font-secondary text-center">Solo Alojamiento</h3>
+                                    </div>
+                                    <div class="card__body">
+                                        <ul class="ul">
+                                            <li> Sin régimen Botella de agua de bienvenida </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card__footer">
+                                        <input type="radio" name="ofertas_hotel" class="card__radio" id="oferta_1"
+                                            value="Solo Alojamiento" />
+                                        <label for="oferta_1" class="card__label h4 d__flex align-center">
+                                            <div class="card__check"></div>
+                                            <span>Elegir régimen</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card__title">
+                                        <h3 class="h3 font-bold font-secondary text-center">Alojamiento y Desayuno</h3>
+                                    </div>
+                                    <div class="card__body">
+                                        <ul class="ul">
+                                            <li> Desayuno buffet completo </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card__footer">
+                                        <input type="radio" name="ofertas_hotel" class="card__radio" id="oferta_2"
+                                            value="Alojamiento y Desayuno" />
+                                        <label for="oferta_2" class="card__label h4 d__flex align-center">
+                                            <div class="card__check"></div>
+                                            <span>Elegir régimen</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card__title">
+                                        <h3 class="h3 font-bold font-secondary text-center">Media Pensión</h3>
+                                    </div>
+                                    <div class="card__body">
+                                        <ul class="ul">
+                                            <li> Desayuno buffet completo </li>
+                                            <li> Cena buffet </li>
+                                            <li> No incluye </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card__footer">
+                                        <input type="radio" name="ofertas_hotel" class="card__radio" id="oferta_3"
+                                            value="Media Pensión" />
+                                        <label for="oferta_3" class="card__label h4 d__flex align-center">
+                                            <div class="card__check"></div>
+                                            <span>Elegir régimen</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card__title">
+                                        <h3 class="h3 font-bold font-secondary text-center">Todo incluido</h3>
+                                    </div>
+                                    <div class="card__body">
+                                        <ul class="ul">
+                                            <li> Dispondrás de comida y bebida todo el día y durante toda tu estancia.
+                                            </li>
+                                            <li> Restaurante buffet </li>
+                                            <li> Snack Bar </li>
+                                            <li> Servicio de bares (marcas nacionales) </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card__footer">
+                                        <input type="radio" name="ofertas_hotel" class="card__radio" id="oferta_4"
+                                            value="Todo incluido" />
+                                        <label for="oferta_4" class="card__label h4 d__flex align-center">
+                                            <div class="card__check"></div>
+                                            <span>Elegir régimen</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card__title">
+                                        <h3 class="h3 font-bold font-secondary text-center">Unlimited Services</h3>
+                                    </div>
+                                    <div class="card__body">
+                                        <ul class="ul">
+                                            <li> Restaurante buffet con bebidas Premium </li>
+                                            <li> Restaurante a la carta (una cena por estancia) </li>
+                                            <li> Snack Bar con bebidas Premium </li>
+                                            <li> Minibar incluido </li>
+                                            <li> Acceso a SPA y 45 minutos de masaje por persona </li>
+                                            <li> Actividades deportivas (acuáticas sin motor) </li>
+                                            <li> Caja fuerte</li>
+                                            <li> Parking gratuito</li>
+                                            <li> Lavandería </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card__footer">
+                                        <input type="radio" name="ofertas_hotel" class="card__radio" id="oferta_5"
+                                            value="Unlimited Services" />
+                                        <label for="oferta_5" class="card__label h4 d__flex align-center">
+                                            <div class="card__check"></div>
+                                            <span>Elegir régimen</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="tab-content__article" id="content-tab-2">
+                    <div class="row">
+                        <div class="col col-12">
+                            <div class="accordion">
+                                <div class="accordion__item relative my-3 py-1 px-4 bg-white"
+                                    data-rel-accordion="#content-accordion-estancia">
+                                    <div class="absolute absolute-top absolute-right bg-red exclusive">
+                                        <span class="text-white text-upper small"> EXCLUSIVO HOTELES.COM </span>
+                                    </div>
+                                    <div class="accordion__title">
+                                        <h5 class="h1 font-bold">Mejora tu estancia <small
+                                                class="small">Opcional</small></h5>
+                                    </div>
+                                    <div class="accordion__body" id="content-accordion-estancia">
+                                        <div class="cards-image d__flex my-4 mx-0">
+                                            <div class="cards-image__image col-12 col-xs-6 col-sm-5 col-md-4 p-0">
+                                                <img src="./assets/images/img1.png" class="img-responsive"
+                                                    alt="imagen 1" />
+                                            </div>
+                                            <div
+                                                class="cards-image__body d__flex direction-column justify-between col-12 col-xs-6 col-sm-7 col-md-8">
+                                                <div>
+                                                    <div class="cards-image__title">
+                                                        <h5 class="h2 my-5">Olvídese de la rutina</h5>
+                                                    </div>
+                                                    <div class="cards-image__text">
+                                                        <p class="font-secundary">Cras vehicula vestibulum dapibus.
+                                                            Pellentesque auctor dolor et purus facilisis maximus. Mauris
+                                                            eget urna luctus, imperdiet neque nec, aliquet lorem.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion">
+                                                    <div class="accordion__item my-5 p-0 no-border"
+                                                        data-rel-accordion="#content-accordion-estancia-item1">
+                                                        <div class="accordion__title">
+                                                            <h5 class="h6 font-bold right">Más información y condiciones
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="accordion__body my-4 px-1"
+                                                        id="content-accordion-estancia-item1">
+                                                        <p class="font-secundary m-0">Incluye</p>
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-4">
+                                                                <ul class="ul my-5">
+                                                                    <li class="p"> Baño javanés Mandi Susu tradicional:
+                                                                        evocación de los baños que tomaban las princesas
+                                                                        de las cortes y palacios de Java Central, en
+                                                                        Indonesia, con antiguas recetas en las que se
+                                                                        mezclaba la leche y las especias.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-12 col-sm-4">
+                                                                <ul class="ul my-5">
+                                                                    <li class="p"> Baño floral balinés: con aceite de
+                                                                        almendra dulce y aromas de jazmín. </li>
+                                                                    <li class="p"> Baño oceánico: con sal marina y gajos
+                                                                        de mandarina o lima. </li>
+                                                                    <li class="p"> Baño de pies floral: baño aromático
+                                                                        de pies, con pétalos y aromas. </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-12 col-sm-4">
+                                                                <ul class="ul my-5">
+                                                                    <li class="p"> Baño de vapor herbal: baño de vapor
+                                                                        con hierbas del sudeste asiático. </li>
+                                                                    <li class="p"> Rain shower. </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <p class="font-secundary text-blue font-bold"> Valores
+                                                                    no acumulables a otras promociones similares</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cards-image d__flex my-4 mx-0">
+                                            <div class="cards-image__image col-12 col-xs-6 col-sm-5 col-md-4 p-0">
+                                                <img src="./assets/images/img2.png" class="img-responsive"
+                                                    alt="imagen 1" />
+                                            </div>
+                                            <div
+                                                class="cards-image__body d__flex direction-column justify-between col-12 col-xs-6 col-sm-7 col-md-8 col-12 col-xs-6 col-sm-7 col-md-8">
+                                                <div>
+                                                    <div class="cards-image__title">
+                                                        <h5 class="h2 my-5">Experiencias y programas SPA con agua</h5>
+                                                    </div>
+                                                    <div class="cards-image__text">
+                                                        <p class="font-secundary">Cras vehicula vestibulum dapibus. Las
+                                                            experiencias spa de agua tienen una presencia muy especial
+                                                            en SPA Sensations. No es extraño si consideramos que la
+                                                            mayor parte del planeta, así como del propio cuerpo humano,
+                                                            están compuestos de agua. <br /> El arte de recrear
+                                                            experiencias de agua en variaciones ilimitadas es la base de
+                                                            la propuesta de SPA Sensations a sus clientes, aportando el
+                                                            refinamiento al baño y a la hidratación en todas sus formas.
+                                                            Un mundo mágico de posibilidades, más allá de la terapia y
+                                                            del que ahora usted, también podrá disfrutar.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion">
+                                                    <div class="accordion__item my-5 p-0 no-border"
+                                                        data-rel-accordion="#content-accordion-estancia-item2">
+                                                        <div class="accordion__title">
+                                                            <h5 class="h6 font-bold right">Más información y condiciones
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="accordion__body my-4 px-1"
+                                                        id="content-accordion-estancia-item2">
+                                                        <p class="font-secundary m-0">Incluye</p>
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-4">
+                                                                <ul class="ul my-5">
+                                                                    <li class="p"> Baño javanés Mandi Susu tradicional:
+                                                                        evocación de los baños que tomaban las princesas
+                                                                        de las cortes y palacios de Java Central, en
+                                                                        Indonesia, con antiguas recetas en las que se
+                                                                        mezclaba la leche y las especias.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-12 col-sm-4">
+                                                                <ul class="ul my-5">
+                                                                    <li class="p"> Baño floral balinés: con aceite de
+                                                                        almendra dulce y aromas de jazmín. </li>
+                                                                    <li class="p"> Baño oceánico: con sal marina y gajos
+                                                                        de mandarina o lima. </li>
+                                                                    <li class="p"> Baño de pies floral: baño aromático
+                                                                        de pies, con pétalos y aromas. </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-12 col-sm-4">
+                                                                <ul class="ul my-5">
+                                                                    <li class="p"> Baño de vapor herbal: baño de vapor
+                                                                        con hierbas del sudeste asiático. </li>
+                                                                    <li class="p"> Rain shower. </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <p class="font-secundary text-blue font-bold"> Valores
+                                                                    no acumulables a otras promociones similares</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion__item relative my-3 py-1 px-4 bg-white"
+                                    data-rel-accordion="#content-accordion-servicios">
+                                    <div class="absolute absolute-top absolute-right bg-red exclusive">
+                                        <span class="text-white text-upper small"> EXCLUSIVO HOTELES.COM </span>
+                                    </div>
+                                    <div class="accordion__title">
+                                        <h5 class="h1 font-bold">Servicios de habitación <small
+                                                class="small">Opcional</small></h5>
+                                    </div>
+                                    <div class="accordion__body" id="content-accordion-servicios">
+                                        <div class="cards-image d__flex my-4 mx-0">
+                                            <div class="cards-image__image col-12 col-xs-6 col-sm-5 col-md-4 p-0">
+                                                <img src="./assets/images/img1.png" class="img-responsive"
+                                                    alt="imagen 1" />
+                                            </div>
+                                            <div
+                                                class="cards-image__body d__flex direction-column justify-between col-12 col-xs-6 col-sm-7 col-md-8">
+                                                <div>
+                                                    <div class="cards-image__title">
+                                                        <h5 class="h2 my-5">Olvídese de la rutina</h5>
+                                                    </div>
+                                                    <div class="cards-image__text">
+                                                        <p class="font-secundary">Cras vehicula vestibulum dapibus.
+                                                            Pellentesque auctor dolor et purus facilisis maximus. Mauris
+                                                            eget urna luctus, imperdiet neque nec, aliquet lorem.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion">
+                                                    <div class="accordion__item my-5 p-0 no-border"
+                                                        data-rel-accordion="#content-accordion-servicios-item1">
+                                                        <div class="accordion__title">
+                                                            <h5 class="h6 font-bold right">Más información y condiciones
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="accordion__body my-4 px-1"
+                                                        id="content-accordion-servicios-item1">
+                                                        <p class="font-secundary m-0">Incluye</p>
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-4">
+                                                                <ul class="ul my-5">
+                                                                    <li class="p"> Baño javanés Mandi Susu tradicional:
+                                                                        evocación de los baños que tomaban las princesas
+                                                                        de las cortes y palacios de Java Central, en
+                                                                        Indonesia, con antiguas recetas en las que se
+                                                                        mezclaba la leche y las especias.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-12 col-sm-4">
+                                                                <ul class="ul my-5">
+                                                                    <li class="p"> Baño floral balinés: con aceite de
+                                                                        almendra dulce y aromas de jazmín. </li>
+                                                                    <li class="p"> Baño oceánico: con sal marina y gajos
+                                                                        de mandarina o lima. </li>
+                                                                    <li class="p"> Baño de pies floral: baño aromático
+                                                                        de pies, con pétalos y aromas. </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-12 col-sm-4">
+                                                                <ul class="ul my-5">
+                                                                    <li class="p"> Baño de vapor herbal: baño de vapor
+                                                                        con hierbas del sudeste asiático. </li>
+                                                                    <li class="p"> Rain shower. </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <p class="font-secundary text-blue font-bold"> Valores
+                                                                    no acumulables a otras promociones similares</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cards-image d__flex my-4 mx-0">
+                                            <div class="cards-image__image col-12 col-xs-6 col-sm-5 col-md-4 p-0">
+                                                <img src="./assets/images/img2.png" class="img-responsive"
+                                                    alt="imagen 1" />
+                                            </div>
+                                            <div
+                                                class="cards-image__body d__flex direction-column justify-between col-12 col-xs-6 col-sm-7 col-md-8 col-12 col-xs-6 col-sm-7 col-md-8">
+                                                <div>
+                                                    <div class="cards-image__title">
+                                                        <h5 class="h2 my-5">Experiencias y programas SPA con agua</h5>
+                                                    </div>
+                                                    <div class="cards-image__text">
+                                                        <p class="font-secundary">Cras vehicula vestibulum dapibus. Las
+                                                            experiencias spa de agua tienen una presencia muy especial
+                                                            en SPA Sensations. No es extraño si consideramos que la
+                                                            mayor parte del planeta, así como del propio cuerpo humano,
+                                                            están compuestos de agua. <br /> El arte de recrear
+                                                            experiencias de agua en variaciones ilimitadas es la base de
+                                                            la propuesta de SPA Sensations a sus clientes, aportando el
+                                                            refinamiento al baño y a la hidratación en todas sus formas.
+                                                            Un mundo mágico de posibilidades, más allá de la terapia y
+                                                            del que ahora usted, también podrá disfrutar.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion">
+                                                    <div class="accordion__item my-5 p-0 no-border"
+                                                        data-rel-accordion="#content-accordion-servicios-item2">
+                                                        <div class="accordion__title">
+                                                            <h5 class="h6 font-bold right">Más información y condiciones
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="accordion__body my-4 px-1"
+                                                        id="content-accordion-servicios-item2">
+                                                        <p class="font-secundary m-0">Incluye</p>
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-4">
+                                                                <ul class="ul my-5">
+                                                                    <li class="p"> Baño javanés Mandi Susu tradicional:
+                                                                        evocación de los baños que tomaban las princesas
+                                                                        de las cortes y palacios de Java Central, en
+                                                                        Indonesia, con antiguas recetas en las que se
+                                                                        mezclaba la leche y las especias.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-12 col-sm-4">
+                                                                <ul class="ul my-5">
+                                                                    <li class="p"> Baño floral balinés: con aceite de
+                                                                        almendra dulce y aromas de jazmín. </li>
+                                                                    <li class="p"> Baño oceánico: con sal marina y gajos
+                                                                        de mandarina o lima. </li>
+                                                                    <li class="p"> Baño de pies floral: baño aromático
+                                                                        de pies, con pétalos y aromas. </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-12 col-sm-4">
+                                                                <ul class="ul my-5">
+                                                                    <li class="p"> Baño de vapor herbal: baño de vapor
+                                                                        con hierbas del sudeste asiático. </li>
+                                                                    <li class="p"> Rain shower. </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <p class="font-secundary text-blue font-bold"> Valores
+                                                                    no acumulables a otras promociones similares</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
 </body>
 
 </html>
