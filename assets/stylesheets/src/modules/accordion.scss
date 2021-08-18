@@ -1,10 +1,9 @@
 .accordion {
     &__item {
-        margin-bottom: 24px;
-        padding: 33px 8px 22px 8px;
+        // padding: 33px 8px 22px 8px;
         border: 1px solid $c-grey-4;
         @media (min-width: 768px) {
-            padding: 33px 20px 21px 16px;
+            // padding: 33px 20px 21px 16px;
         }
     }
     &__title {
