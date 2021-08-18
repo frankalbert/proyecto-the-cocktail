@@ -51,27 +51,6 @@
     &__body {
         margin-bottom: 80px;
         padding: 0;
-        ul {
-            padding: 0;
-            list-style: none;
-            li {
-                position: relative;
-                margin-bottom: 6px;
-                padding-left: 13px;
-                @extend .font-secondary;
-                @extend .h5;
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 8px;
-                    left: 0px;
-                    width: 5px;
-                    height: 5px;
-                    @include border-radius(50%);
-                    background-color: $c-grey-2;
-                }
-            }
-        }
     }
     &__footer {
         position: absolute;
