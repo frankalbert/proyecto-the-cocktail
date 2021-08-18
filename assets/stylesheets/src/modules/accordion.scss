@@ -2,7 +2,6 @@
     &__item {
         margin-bottom: 24px;
         padding: 33px 8px 22px 8px;
-        background-color: $c-white;
         border: 1px solid $c-grey-4;
         @media (min-width: 768px) {
             padding: 33px 20px 21px 16px;
@@ -18,7 +17,7 @@
             color: $c-primary-light;
             &.right {
                 padding-left: 0;
-                padding-right: 18px;
+                padding-right: 36px;
                 &::before {
                     left: auto;
                     right: 0;
@@ -31,7 +30,7 @@
                 top: 0;
                 @include transition(0.5s);
             }
-            .expanded & {
+            .expanded > & {
                 &::before {
                     @include rotate(180deg);
                 }

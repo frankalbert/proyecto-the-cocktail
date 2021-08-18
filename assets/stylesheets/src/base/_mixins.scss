@@ -91,3 +91,53 @@
     -ms-transform: rotate($degrees);
     transform: rotate($degrees);
 }
+
+// Grid Generator
+@mixin gridGenerator($breakpoint) {
+    @for $column from 1 to $columns-number + 1 {
+        @if ($breakpoint) {
+            .col-#{$breakpoint}-#{$column} {
+                // flex-basis: percentage($column / $columns-number);
+                width: (100% * $column) / $columns-number;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+        } @else {
+            .col-#{$column} {
+                width: (100% * $column) / $columns-number;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+        }
+    }
+}
+
+@mixin mobFirst {
+    @media (min-width: #{$screen-xs-min}) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @media (min-width: #{$screen-xs-max}) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+}

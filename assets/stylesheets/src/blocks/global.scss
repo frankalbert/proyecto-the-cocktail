@@ -13,17 +13,15 @@
     }
 }
 .col {
-    padding: 0 16px;
-    &-12 {
-        width: 100%;
-    }
+    padding-left: 16px;
+    padding-right: 16px;
 }
 .relative {
     position: relative;
 }
 .m {
     &-0 {
-        margin: 0;
+        margin: 0 !important;
     }
     &y {
         &-0 {
@@ -80,7 +78,7 @@
 }
 .p {
     &-0 {
-        padding: 0;
+        padding: 0 !important;
     }
     &y {
         &-0 {
@@ -135,7 +133,12 @@
         }
     }
 }
-
+.img {
+    &-responsive {
+        max-width: 100%;
+        height: auto;
+    }
+}
 .absolute {
     position: absolute;
     &-top {
@@ -156,6 +159,9 @@
 .text {
     &-white {
         color: $c-white;
+    }
+    &-blue {
+        color: $c-blue-4;
     }
     &-black {
         color: $c-black;
@@ -183,7 +189,6 @@
 }
 .d__flex {
     @extend .row;
-    margin: 0;
 }
 .justify {
     &--start {
@@ -228,4 +233,50 @@
     &-bold {
         font-weight: bold;
     }
+}
+.no {
+    &-border {
+        border: none !important;
+    }
+}
+
+.ul {
+    padding: 0;
+    list-style: none;
+    li {
+        position: relative;
+        margin-bottom: 6px;
+        padding-left: 13px;
+        @extend .font-secondary;
+        @extend .h5;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 0px;
+            width: 5px;
+            height: 5px;
+            @include border-radius(50%);
+            background-color: $c-grey-2;
+        }
+    }
+}
+
+// Mobile First
+@include gridGenerator($breakpoint: false);
+
+@include xs {
+    @include gridGenerator($breakpoint: "xs");
+}
+
+@include sm {
+    @include gridGenerator($breakpoint: "sm");
+}
+
+@include md {
+    @include gridGenerator($breakpoint: "md");
+}
+
+@include lg {
+    @include gridGenerator($breakpoint: "lg");
 }
