@@ -4,9 +4,28 @@
         list-style: none;
     }
     &__item {
-        padding: 8px 0;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: auto;
+            left: 0;
+            bottom: 0;
+            width: 0px;
+            height: 2px;
+            @include transitionProp(width, 0.4s, ease-in-out);
+            background-color: $c-primary-light;
+        }
         &.active {
-            border-bottom: 2px solid $c-primary;
+            &::before {
+                width: 100%;
+                background-color: $c-primary;
+            }
+        }
+        &:hover {
+            &::before {
+                width: 100%;
+            }
         }
     }
     &__button {
@@ -14,11 +33,12 @@
             color: $c-primary;
         }
         margin: 0;
-        padding: 12px 40px;
+        padding: 20px 40px;
         background-color: $c-white;
         color: $c-primary-light;
         cursor: pointer;
         font-weight: 400;
+        @include transitionProp(color, 0.4s, ease-in-out);
     }
     &__title {
         color: $c-primary;
